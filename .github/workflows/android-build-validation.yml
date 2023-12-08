@@ -39,3 +39,8 @@ jobs:
         env:
           CGO_ENABLED: 0
           ANDROID_NDK_HOME: /usr/local/lib/android/sdk/ndk/23.1.7779620
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Android AAR
+          path: $GITHUB_WORKSPACE/netbird.aar
